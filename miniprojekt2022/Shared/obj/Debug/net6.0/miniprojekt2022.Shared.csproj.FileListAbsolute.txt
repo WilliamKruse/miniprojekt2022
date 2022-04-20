@@ -1,0 +1,11 @@
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/bin/Debug/net6.0/miniprojekt2022.Shared.deps.json
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/bin/Debug/net6.0/miniprojekt2022.Shared.dll
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/bin/Debug/net6.0/ref/miniprojekt2022.Shared.dll
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/bin/Debug/net6.0/miniprojekt2022.Shared.pdb
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/Debug/net6.0/miniprojekt2022.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/Debug/net6.0/miniprojekt2022.Shared.AssemblyInfoInputs.cache
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/Debug/net6.0/miniprojekt2022.Shared.AssemblyInfo.cs
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/Debug/net6.0/miniprojekt2022.Shared.csproj.CoreCompileInputs.cache
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/Debug/net6.0/miniprojekt2022.Shared.dll
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/Debug/net6.0/ref/miniprojekt2022.Shared.dll
+/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/Debug/net6.0/miniprojekt2022.Shared.pdb
