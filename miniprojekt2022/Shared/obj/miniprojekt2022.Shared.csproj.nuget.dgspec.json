@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj": {}
+    "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj": {}
   },
   "projects": {
-    "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj": {
+    "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj",
         "projectName": "miniprojekt2022.Shared",
-        "projectPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj",
-        "packagesPath": "/Users/williamkruse/.nuget/packages/",
-        "outputPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/",
+        "projectPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj",
+        "packagesPath": "C:\\Users\\Kerst\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/williamkruse/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Kerst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

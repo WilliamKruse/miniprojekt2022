@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Server/miniprojekt2022.Server.csproj": {}
+    "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Server\\miniprojekt2022.Server.csproj": {}
   },
   "projects": {
-    "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Client/miniprojekt2022.Client.csproj": {
+    "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Client\\miniprojekt2022.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Client/miniprojekt2022.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Client\\miniprojekt2022.Client.csproj",
         "projectName": "miniprojekt2022.Client",
-        "projectPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Client/miniprojekt2022.Client.csproj",
-        "packagesPath": "/Users/williamkruse/.nuget/packages/",
-        "outputPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Client/obj/",
+        "projectPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Client\\miniprojekt2022.Client.csproj",
+        "packagesPath": "C:\\Users\\Kerst\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/williamkruse/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Kerst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj": {
-                "projectPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj"
+              "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj": {
+                "projectPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj"
               }
             }
           }
@@ -73,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -82,33 +84,35 @@
         }
       }
     },
-    "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Server/miniprojekt2022.Server.csproj": {
+    "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Server\\miniprojekt2022.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Server/miniprojekt2022.Server.csproj",
+        "projectUniqueName": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Server\\miniprojekt2022.Server.csproj",
         "projectName": "miniprojekt2022.Server",
-        "projectPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Server/miniprojekt2022.Server.csproj",
-        "packagesPath": "/Users/williamkruse/.nuget/packages/",
-        "outputPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Server/obj/",
+        "projectPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Server\\miniprojekt2022.Server.csproj",
+        "packagesPath": "C:\\Users\\Kerst\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/williamkruse/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Kerst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Client/miniprojekt2022.Client.csproj": {
-                "projectPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Client/miniprojekt2022.Client.csproj"
+              "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Client\\miniprojekt2022.Client.csproj": {
+                "projectPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Client\\miniprojekt2022.Client.csproj"
               },
-              "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj": {
-                "projectPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj"
+              "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj": {
+                "projectPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj"
               }
             }
           }
@@ -126,6 +130,14 @@
             "Microsoft.AspNetCore.Components.WebAssembly.Server": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.0, )"
             }
           },
           "imports": [
@@ -146,26 +158,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj": {
+    "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj",
         "projectName": "miniprojekt2022.Shared",
-        "projectPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/miniprojekt2022.Shared.csproj",
-        "packagesPath": "/Users/williamkruse/.nuget/packages/",
-        "outputPath": "/Users/williamkruse/Projects/miniprojekt2022/miniprojekt2022/Shared/obj/",
+        "projectPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\miniprojekt2022.Shared.csproj",
+        "packagesPath": "C:\\Users\\Kerst\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerst\\OneDrive\\IT Arkitektur\\2. Semester\\Shelter case - mini projekt\\Opgave\\miniprojekt2022\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/williamkruse/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Kerst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -198,7 +212,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

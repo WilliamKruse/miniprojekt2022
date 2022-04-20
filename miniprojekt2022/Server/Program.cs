@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.ResponseCompression;
+﻿using miniprojekt2022.Server.Models;
+using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+//tilføjer repository som service til databasen
+builder.Services.AddScoped<IShelterRepository, ShelterRepositoryMongo>();
 
 var app = builder.Build();
 
