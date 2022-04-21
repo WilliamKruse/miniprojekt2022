@@ -18,7 +18,7 @@ namespace miniprojekt2022.Server.Models
         //metode der finder og returner alle shelters i en liste 
         public List<ShelterItem> GetAllShelters()
         {
-            return db.alleshelters.Find(_ => true).ToList();
+            return db.alleshelters.Find(_=>true).ToList();
         }
 
         //metode der finder og returner alle bookinger i en liste 

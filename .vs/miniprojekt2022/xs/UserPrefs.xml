@@ -1,22 +1,42 @@
 ﻿<Properties StartupConfiguration="{9A1637BB-7BB3-4CF6-876C-DA3DBB03C141}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="miniprojekt2022/Client/wwwroot/css/bootstrap/bootstrap.min.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="miniprojekt2022/Shared/Models/ShelterItem.cs">
     <Files>
       <File FileName="miniprojekt2022/Client/wwwroot/css/bootstrap/bootstrap.min.css" Line="8" Column="1" />
+      <File FileName="miniprojekt2022/Shared/Models/ShelterItem.cs" Line="24" Column="28" />
+      <File FileName="miniprojekt2022/Server/Models/ShelterReopsitoryMongo.cs" Line="19" Column="50" />
+      <File FileName="miniprojekt2022/Server/Program.cs" Line="12" Column="27" />
+      <File FileName="miniprojekt2022/Shared/Models/BookingItem.cs" Line="1" Column="1" />
+      <File FileName="miniprojekt2022/Client/Program.cs" Line="1" Column="1" />
+      <File FileName="miniprojekt2022/Client/App.razor" Line="5" Column="13" />
+      <File FileName="miniprojekt2022/Client/_Imports.razor" Line="1" Column="1" />
+      <File FileName="miniprojekt2022/Server/Controllers/ShelterController.cs" Line="36" Column="29" />
+      <File FileName="miniprojekt2022/Server/Models/ShelterDBContext.cs" Line="1" Column="1" />
+      <File FileName="miniprojekt2022/Server/Models/IShelterRepository.cs" Line="1" Column="1" />
+      <File FileName="miniprojekt2022/Server/appsettings.json" Line="1" Column="1" />
+      <File FileName="miniprojekt2022/Client/Pages/FetchData.razor" Line="28" Column="14" />
+      <File FileName="miniprojekt2022/Client/Pages/Counter.razor" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="miniprojekt2022" expanded="True">
             <Node name="miniprojekt2022.Client" expanded="True">
-              <Node name="Shared" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="bootstrap" expanded="True">
-                    <Node name="bootstrap.min.css" selected="True" />
-                  </Node>
-                </Node>
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
               </Node>
+              <Node name="Pages" expanded="True" />
+            </Node>
+            <Node name="miniprojekt2022.Server" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="miniprojekt2022.Shared" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -30,8 +50,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.miniprojekt2022.Shared FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.miniprojekt2022.Client FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.miniprojekt2022.Server PreferredExecutionTarget="/Applications/Safari.app" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.miniprojekt2022.Server PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>

@@ -25,7 +25,7 @@ namespace miniprojekt2022.Server.Controllers
         }
 
         //implementer get metoden
-        [HttpGet]
+        [HttpGet("shelter")]
         //returner alle shelters fra databasen
         public IEnumerable<ShelterItem> GetAllShelters()
         {
@@ -33,7 +33,7 @@ namespace miniprojekt2022.Server.Controllers
         }
 
         //implementer get metoden
-        [HttpGet]
+        [HttpGet("booking")]
         //returner alle bookinger fra databasen
         public IEnumerable<BookingItem> GetAllBookings()
         {
@@ -48,8 +48,8 @@ namespace miniprojekt2022.Server.Controllers
             Console.WriteLine("Add item called: " + item.ToString());
             Repository.AddBooking(item);
         }
-
-        [HttpDelete("{id:string}")]
+        
+        [HttpDelete("{id}")]
         //metode der sletter en booking - returner en status kode
         public StatusCodeResult DeleteBooking(string id)
         {
