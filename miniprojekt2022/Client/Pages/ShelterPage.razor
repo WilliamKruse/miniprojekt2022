@@ -19,15 +19,15 @@
                
                 @foreach (var item in ShelterList)
                 {
-                    <li class="shadow-sm p-3 mb-5 bg-light rounded">
-                        <p>
-                            id: @item.ObjectIdShelter <br />
-                            navn: @item.property.PropShelterNavn <br />
-                            besrivelse: @item.property.PropBeskrivelse <br />
-                            max antal pladser: @item.property.PropAntalPersoner
-                            <button @onclick="()=>VælgShelter(item)">vælg</button>
-                        </p>
-                    </li>
+            <li class="shadow-sm p-3 mb-5 bg-light rounded">
+                <p>
+                    id: @item.ObjectIdShelter <br />
+                    navn: @item.property.PropShelterNavn <br />
+                    besrivelse: @item.property.PropBeskrivelse <br />
+                    max antal pladser: @item.property.PropAntalPersoner
+                </p>
+                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" @onclick="()=>VælgShelter(item)">vælg</button>
+            </li>
                 }
             </ul>
         </div>
@@ -53,12 +53,12 @@
                     <ValidationMessage For="@(() => CurrentBooking.Telefon)" />
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label>Telefon</label>
+                    <label>Start Dato</label>
                     <InputDate id="startdato" @bind-Value="CurrentBooking.StartDato" class="form-control" />
                     <ValidationMessage For="@(() => CurrentBooking.StartDato)" />
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label>Telefon</label>
+                    <label>Slut Dato</label>
                     <InputDate id="slutdato" @bind-Value="CurrentBooking.SlutDato" class="form-control" />
                     <ValidationMessage For="@(() => CurrentBooking.SlutDato)" />
                 </div>
@@ -66,7 +66,13 @@
                     <button type="submit" class="btn btn-primary">BOOK</button>
                 </div>
             </EditForm>
-           
+            @if (ErrorCode == 200)
+            {
+                <div class="alert alert-success" role="alert">
+                    <strong>JAAAA!</strong> Din booking er registreret i vores system!
+                </div>
+              
+            }
         </div>
     </div>
 </div>
@@ -89,6 +95,7 @@
         ShelterList = (await Service.GetAllShelters()).ToList();
         Console.WriteLine("hej");
     }
+
     protected override void OnInitialized()
     {
         EditContext = new EditContext(CurrentBooking);
@@ -111,5 +118,6 @@
     {
         Console.WriteLine("Hey det er invalid data");
     }
+  
 }
 
