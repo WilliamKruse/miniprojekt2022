@@ -44,6 +44,11 @@ namespace miniprojekt2022.Shared.Models
 			this.StartDato = startDato;
 			this.SlutDato = slutDato;
 		}
+
+		public BookingItem()
+        {
+
+        }
 	}
 }
 

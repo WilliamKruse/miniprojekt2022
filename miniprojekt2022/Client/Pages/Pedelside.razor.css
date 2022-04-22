@@ -1,0 +1,35 @@
+﻿h1{
+    padding-bottom: 17px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #5d615f;
+    color: white;
+}
+
+.delete {
+    background-color: #e7e7e7;
+    color: black;
+    border-color:#5d615f;
+}

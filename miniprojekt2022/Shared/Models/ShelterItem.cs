@@ -32,6 +32,11 @@ namespace miniprojekt2022.Shared.Models
 			this.Beskrivelse = beskrivelse;
 			this.AntalPersoner = antalPersoner;
 		}
+
+		public ShelterItem()
+        {
+
+        }
 	
 	}
 	

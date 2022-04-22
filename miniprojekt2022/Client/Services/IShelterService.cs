@@ -9,22 +9,14 @@ namespace miniprojekt2022.Client.Services
     {
         //GRUD operationer
 
-
-
         //READ
         Task<ShelterItem[]?> GetAllShelters();
-
-
 
         //READ
         Task<BookingItem[]?> GetAllBookings();
 
-
-
         //CREATE
         Task<int> AddBooking(BookingItem item);
-
-
 
         //DELETE
         Task<int> DeleteBooking(int id);

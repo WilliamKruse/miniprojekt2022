@@ -1,23 +1,23 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-kr9ZtMiINfsYinGrfKQztdzB8mMe20ES0r8dmIWILxU=",
+      "hash": "sha256-hIZGL44ndLqWWiCcLQmrcQ\/jWPbolQFObbPQgkq\/qZY=",
       "url": "css\/app.css"
     },
     {
-      "hash": "sha256-39I0HoYqzK\/986SYAo8kurO0+66GzYYlkgtcWvgFT6c=",
+      "hash": "sha256-iInhgU21csv7EjecRqRj\/16lHUydNjQsceCCZFQxIdM=",
       "url": "css\/bootstrap\/bootstrap.min.css"
     },
     {
-      "hash": "sha256-lPl+YkZ5F\/Gqi+xd4+Juk6O2lf8947F0B9TDTF+fxSM=",
+      "hash": "sha256-ThzokznJQjUzs7o+SUJ5f0V7Fk7D3bAYCrkiXhXhv\/Q=",
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-BgJpRZSGsv2PCDyutlOHSV9vngLEp53cXBqPpTJlCvE=",
+      "hash": "sha256-T89zvsZynCQoBH7WzwHyPKEWfoMJcKH+5ZG6Bdb7ptQ=",
       "url": "css\/open-iconic\/FONT-LICENSE"
     },
     {
-      "hash": "sha256-VKmQXW8mRZ7hoad6E\/sXRxRWnDwfp6ihgfNDt3M7q9Q=",
+      "hash": "sha256-X0M5LaGTrls\/UjJ7mtwCOCFPIvX02DdZOL+6erPvJuw=",
       "url": "css\/open-iconic\/font\/css\/open-iconic-bootstrap.min.css"
     },
     {
@@ -29,7 +29,7 @@
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.otf"
     },
     {
-      "hash": "sha256-u+GkRX\/3vmziPc6M\/O+lTRu+QNOFBJg8DNTfcSFPI\/k=",
+      "hash": "sha256-6XUeBwDRz0hA1ieoZaZCniVWmQebiCEGz+GzU2eGV54=",
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.svg"
     },
     {
@@ -41,11 +41,11 @@
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.woff"
     },
     {
-      "hash": "sha256-lmR0kygUnUAknae38gH2rAsdPtwBPv4tfDUB8r3vMes=",
+      "hash": "sha256-RyOqJimcme8gagNdEyLCZLcvvuJgQq1NFxOWKkUjDiI=",
       "url": "css\/open-iconic\/ICON-LICENSE"
     },
     {
-      "hash": "sha256-jvSDLAg6bb6yvKmZJAITpc2sDOfbi5aQHin4AczazvA=",
+      "hash": "sha256-o23RUX+Qa7x9JtgXl9dyn9Qknkk6ypZzkPSsaNYoMg8=",
       "url": "css\/open-iconic\/README.md"
     },
     {
@@ -61,15 +61,15 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-wA45nNcvQKVpyQZNxHxic7BrVx1+N2mPBkYk7SEbSzs=",
+      "hash": "sha256-jDx8lz1ANE6EdOhdNcihCF0plNu+kaCDtIVc095nhbk=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-DV7bvEZYfZ3L+BfCFuyzLDrJhO\/kBaPnQB65ZZ7G0sc=",
+      "hash": "sha256-q8bSKjhlW+vxiCPuAwIKyY4xY4RnOemn4swML5\/YwNs=",
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-Dit0BMg9uW2DjYuGGH6HA5gnmQYZmLbBvdkPwG2g9HA=",
+      "hash": "sha256-1dplAgrJkMxc8MOXfJdc9ec5vVmYcJ0yuv\/sa6H5DkY=",
       "url": "miniprojekt2022.Client.styles.css"
     },
     {
@@ -858,7 +858,7 @@
     },
     {
       "hash": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",
-      "url": "_framework\/dotnet.6.0.1.xzggs2ie80.js"
+      "url": "_framework\/dotnet.6.0.1.4iz1c56br2.js"
     },
     {
       "hash": "sha256-2kYo2V\/aZ7htYEvY5PVJlrMYhFf1jH8\/VS+SP7B7QUg=",
@@ -885,19 +885,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-pcl+8MU+yuEmP3cDdR91Uu5jyB7sjkff8i\/98VAa5yU=",
+      "hash": "sha256-ZJjd8P9LZoHiWvwWXeOQRsuD+ZCj+POcCE2niiVM2Ps=",
       "url": "_framework\/miniprojekt2022.Shared.dll"
     },
     {
-      "hash": "sha256-Sjqbdlof6p7FXjoUmHHHUwyuR6d7ck8m04QjkaOq1a0=",
+      "hash": "sha256-ojiPDbRifJu8rfGTTH6r5P0mf3oDDkydeis0NzeCo20=",
       "url": "_framework\/miniprojekt2022.Shared.pdb"
     },
     {
-      "hash": "sha256-iIurjhaIhhK0zzl48GDTaBH9y62VmcgYfiDxKuCwqo0=",
+      "hash": "sha256-aMhTgGel+OVpGTbH8LlTASrOFvyNo99cGM0AukdqyMU=",
       "url": "_framework\/miniprojekt2022.Client.dll"
     },
     {
-      "hash": "sha256-TDE4X8R1g+klHr4lv8rqaJeNNBBv8oXPyn5QT3U25gM=",
+      "hash": "sha256-PDTqgdM5vcyuZW5XpsRH5P+YzzWPR6NbzA35q2W+EIM=",
       "url": "_framework\/miniprojekt2022.Client.pdb"
     },
     {
@@ -905,9 +905,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-oaBe\/kgEUPtTbC\/NF+Z\/xcLy\/FZIXd4P45GKdOegDx8=",
+      "hash": "sha256-o\/RTOB\/CvoY1cNmwJTeld5GpJ22n9\/Fi4hSjpxIcJC4=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "V0olpkn+"
+  "version": "9c4BH+F9"
 };
