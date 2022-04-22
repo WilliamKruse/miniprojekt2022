@@ -203,15 +203,15 @@
       "mscorlib.dll": "sha256-+5VU+MYaTQMTlRe9QKobEjWZWv6I9teAGdNndWSBqWE=",
       "netstandard.dll": "sha256-E5RFhGIaDH5QM6BEbFUuHU8U9wP6N6jbo5MCttzLOCM=",
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
-      "miniprojekt2022.Shared.dll": "sha256-pcl+8MU+yuEmP3cDdR91Uu5jyB7sjkff8i\/98VAa5yU=",
-      "miniprojekt2022.Client.dll": "sha256-Z8nJY\/l4R0k0F8GD5OYxll2r95Hm\/nJB\/b5Vn08mTsM="
+      "miniprojekt2022.Shared.dll": "sha256-+cNtJT518KEXQKHArJkrXdCJvwL70hrjECwUSQSr0To=",
+      "miniprojekt2022.Client.dll": "sha256-9\/ypiXKpH7Sh0nFoNMqBRbQW5o0njXkrJ308Jg31uxg="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "miniprojekt2022.Shared.pdb": "sha256-Sjqbdlof6p7FXjoUmHHHUwyuR6d7ck8m04QjkaOq1a0=",
-      "miniprojekt2022.Client.pdb": "sha256-1JHA7pcdX8cCTmEDRwPV8\/N9pWiaqDZIkDNmXciXoPg="
+      "miniprojekt2022.Shared.pdb": "sha256-ii0EBRxrwFIMyI0FvGfZ8lxU+OggxRlUpC8lBDUHVZg=",
+      "miniprojekt2022.Client.pdb": "sha256-0FIya2h3prBLinXepOPMOG3q9nCw8m+z8t7bAhslp3M="
     },
     "runtime": {
       "dotnet.6.0.1.xzggs2ie80.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",

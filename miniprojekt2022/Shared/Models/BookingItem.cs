@@ -13,9 +13,12 @@ namespace miniprojekt2022.Shared.Models
 
 		[Required]
 		[BsonElement("kunde_navn")]
+		[StringLength(40,ErrorMessage = "Det navn er for langt")]
 		public string KundeNavn { get; set; }
 
 		[Required]
+		[DataType(DataType.EmailAddress)]
+		[EmailAddress]
 		[BsonElement("email")]
 		public string Email { get; set; }
 
@@ -34,6 +37,11 @@ namespace miniprojekt2022.Shared.Models
 
 		[BsonElement("slut_dato")]
 		public DateTime? SlutDato { get; set; }
+
+		public BookingItem()
+        {
+			
+        }
 
 		public BookingItem(string kundeNavn = "", string email = "", string telefon = "", string shelterId = "", DateTime startDato = new DateTime(), DateTime slutDato = new DateTime())
 		{

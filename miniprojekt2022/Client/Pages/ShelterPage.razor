@@ -1,0 +1,115 @@
+﻿@page "/shelterpage"
+@using miniprojekt2022.Shared.Models;
+@using miniprojekt2022.Client.Services;
+
+<PageTitle>Book din shelter</PageTitle>
+
+<h3>Book din shelter nu!</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <ul>
+                
+                <li class="shadow-sm p-3 mb-5 bg-light rounded">
+                    
+                        <p>hej</p>
+
+                </li>
+               
+                @foreach (var item in ShelterList)
+                {
+                    <li class="shadow-sm p-3 mb-5 bg-light rounded">
+                        <p>
+                            id: @item.ObjectIdShelter <br />
+                            navn: @item.property.PropShelterNavn <br />
+                            besrivelse: @item.property.PropBeskrivelse <br />
+                            max antal pladser: @item.property.PropAntalPersoner
+                            <button @onclick="()=>VælgShelter(item)">vælg</button>
+                        </p>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <p>hej</p>
+
+            <EditForm EditContext="@EditContext" class="row p-3" OnValidSubmit="@AddBookingHandler" OnInvalidSubmit="@HandleInvalidSubmit">
+                <DataAnnotationsValidator />
+
+                <div class="col-md-12 mb-3">
+                    <label>Fulde Navn</label>
+                    <InputText id="navn" @bind-Value="CurrentBooking.KundeNavn" class="form-control" />
+                    <ValidationMessage For="@(() => CurrentBooking.KundeNavn)" />
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label>Email</label>
+                    <InputText id="email" @bind-Value="CurrentBooking.Email" class="form-control" />
+                    <ValidationMessage For="@(() => CurrentBooking.Email)" />
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label>Telefon</label>
+                    <InputText id="tlf" @bind-Value="CurrentBooking.Telefon" class="form-control" />
+                    <ValidationMessage For="@(() => CurrentBooking.Telefon)" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Telefon</label>
+                    <InputDate id="startdato" @bind-Value="CurrentBooking.StartDato" class="form-control" />
+                    <ValidationMessage For="@(() => CurrentBooking.StartDato)" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Telefon</label>
+                    <InputDate id="slutdato" @bind-Value="CurrentBooking.SlutDato" class="form-control" />
+                    <ValidationMessage For="@(() => CurrentBooking.SlutDato)" />
+                </div>
+                <div class="col-12 mb-6">
+                    <button type="submit" class="btn btn-primary">BOOK</button>
+                </div>
+            </EditForm>
+           
+        </div>
+    </div>
+</div>
+
+@code {
+    private EditContext EditContext;
+    public BookingItem CurrentBooking = new BookingItem();
+
+
+    public List<ShelterItem> ShelterList = new List<ShelterItem>();
+    public int ErrorCode { get; set; }
+    private string? SelectedShelterId { get; set; }
+
+    [Inject]
+    public IShelterService Service { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("hej");
+        ShelterList = (await Service.GetAllShelters()).ToList();
+        Console.WriteLine("hej");
+    }
+    protected override void OnInitialized()
+    {
+        EditContext = new EditContext(CurrentBooking);
+    }
+    public void VælgShelter(ShelterItem x)
+    {
+       CurrentBooking.ShelterId = x.ObjectIdShelter;
+        Console.WriteLine("id sat til SelectedSHelterid");
+    }
+
+    public async Task AddBookingHandler()
+    {
+        Console.WriteLine("Current booking id er sat til local variabel");
+        ErrorCode = await Service.AddBooking(CurrentBooking);
+        CurrentBooking = new BookingItem();
+        EditContext = new EditContext(CurrentBooking);
+        Console.WriteLine("Booking added: return code: " + ErrorCode);
+    }
+    public void HandleInvalidSubmit()
+    {
+        Console.WriteLine("Hey det er invalid data");
+    }
+}
+

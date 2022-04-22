@@ -29,6 +29,7 @@ namespace miniprojekt2022.Server.Controllers
         //returner alle shelters fra databasen
         public IEnumerable<ShelterItem> GetAllShelters()
         {
+            
             return Repository.GetAllShelters();
         }
 
