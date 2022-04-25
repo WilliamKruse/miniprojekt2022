@@ -893,11 +893,11 @@
       "url": "_framework\/miniprojekt2022.Shared.pdb"
     },
     {
-      "hash": "sha256-F1DfAyp94Gu9evYQ8Qb10IMyfuaPDo3PXeD+ISpWbxQ=",
+      "hash": "sha256-rwjIqrquseM3k52RPIDDUbdrJYlVzqSDQZOTVEn3DSo=",
       "url": "_framework\/miniprojekt2022.Client.dll"
     },
     {
-      "hash": "sha256-NwDWMHnRkvDC4MVx4ZYTuZYA9nQZzSYg5Lv1J2vDx\/M=",
+      "hash": "sha256-l6rIoRC\/1+yUfbwxOGZrSWEBEpZsa\/xKzLDpfz7uJpk=",
       "url": "_framework\/miniprojekt2022.Client.pdb"
     },
     {
@@ -905,9 +905,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-6sCTxkdjCiSuiSKJEQ7WRd7bGoLuQ6c6qnddBOinF+E=",
+      "hash": "sha256-zCFjsvChWQz7oqjYhjKkrDTMY8WYBZj9L3pEf\/t7zIs=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "a02BTwBA"
+  "version": "gpdu00Ih"
 };

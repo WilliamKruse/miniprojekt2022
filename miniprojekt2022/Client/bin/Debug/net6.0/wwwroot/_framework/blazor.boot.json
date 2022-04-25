@@ -204,14 +204,14 @@
       "netstandard.dll": "sha256-E5RFhGIaDH5QM6BEbFUuHU8U9wP6N6jbo5MCttzLOCM=",
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
       "miniprojekt2022.Shared.dll": "sha256-Aw38PxJ87oyQc8wElNCNP7owLdbgAi4c828VPdeH3hI=",
-      "miniprojekt2022.Client.dll": "sha256-rwjIqrquseM3k52RPIDDUbdrJYlVzqSDQZOTVEn3DSo="
+      "miniprojekt2022.Client.dll": "sha256-gjzLKkpGSPwTS6tChKWZTr0LgAFd3uKTZPuhY74eb+k="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "miniprojekt2022.Shared.pdb": "sha256-tuohRng8cmcBn6tRg8Zi6b38rkRCXuo9ZaIA6gzEC8I=",
-      "miniprojekt2022.Client.pdb": "sha256-l6rIoRC\/1+yUfbwxOGZrSWEBEpZsa\/xKzLDpfz7uJpk="
+      "miniprojekt2022.Client.pdb": "sha256-pPhaE++lw9ojdwznfX7WjIdlp7y\/GGWf7Z54y7S5xTw="
     },
     "runtime": {
       "dotnet.6.0.1.xzggs2ie80.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",
