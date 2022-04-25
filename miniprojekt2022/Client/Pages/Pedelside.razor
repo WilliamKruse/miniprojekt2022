@@ -12,7 +12,6 @@
     <DataAnnotationsValidator />
 
     <div class="col-md-4 mb-3">
-        <label>Shelter id</label>
         <InputText id="ShelterId" placeholder="Shelter id" @bind-Value="BookItem.ShelterId" class="form-control" />
         <ValidationMessage For="@(() => BookItem.ShelterId)" />
     </div>
@@ -36,18 +35,17 @@
     </thead>
 
     <!--går igennem Bookings og laver en tabel-->
-
-
     <tbody>
-        @foreach (var list in Bookings)
+        @foreach (var item in Bookings)
         {
             <tr>
-                <td>@list.KundeNavn</td>
-                <td>@list.Email</td>
-                <td>@list.Telefon</td>
-                <td>@list.ShelterId</td>
-                <td>@list.StartDato</td>
-                <td>@list.SlutDato</td>
+                <td>@item.KundeNavn</td>
+                <td>@item.Email</td>
+                <td>@item.Telefon</td>
+                <td>@item.ShelterId</td>
+                <!--.Value gør at den ignorer ?nullable values. ToShortDate gør datetime om til dato-->
+                <td>@item.StartDato.Value.AddHours(3).ToShortDateString()</td>
+                <td>@item.SlutDato.Value.AddHours(3).ToShortDateString()</td>
                 <td><button class="btn delete"><span class="oi oi-trash"></span></button></td>
             </tr>
 
@@ -74,16 +72,19 @@
         Bookings = (await Service.GetAllBookings()).ToList();
     }
 
+    //laver ny edit context objekt når siden starter, modelerer ud fra objektet Bookitem
     protected override void OnInitialized()
     {
         EditContext = new EditContext(BookItem);
     }
 
+    //sender fejlmeddelse i console hvis validering ikke er valid
     public void HandleInvalidSubmit()
     {
         Console.WriteLine("Fejl");
     }
 
+    //virker ikke som det skal
     public void FilterShelterId()
     {
         var FilterBookings = new List<BookingItem>();
@@ -95,10 +96,6 @@
                 FilterBookings.Add(item);
             }
         }
-        EditContext = new EditContext(BookItem);
-        Console.WriteLine("Hej");
-        // return FilterBookings;
+    
     }
-
-
 }

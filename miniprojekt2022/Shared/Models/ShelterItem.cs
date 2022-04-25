@@ -8,36 +8,20 @@ using MongoDB.Driver;
 
 namespace miniprojekt2022.Shared.Models
 {
-
+    //deseralizering - Databasen har fields vi skal ignorere
     [BsonIgnoreExtraElements]
     public class ShelterItem
     {
-
-
 
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string ObjectIdShelter { get; set; }
 
-
-
-
-        /*public string? ShelterNavn { get { return property.PropShelterNavn; } set { ShelterNavn = value; } }
-
-
-
-        public string? Beskrivelse { get { return property.PropBeskrivelse; } set { Beskrivelse = value; } }
-
-        public int AntalPersoner { get { return property.PropAntalPersoner; } set { AntalPersoner = value; } }
-*/
-
-
+        //Seralizering - binder objektet "properties" fra mongo til klassen "ShelterProperty"
         [BsonElement("properties")]
         public ShelterProperty property { get; set; }
 
-
-
-
+        //Tom contructor - Mongo bruger kun tomme
         public ShelterItem()
         {
            

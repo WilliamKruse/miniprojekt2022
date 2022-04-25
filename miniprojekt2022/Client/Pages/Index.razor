@@ -1,9 +1,10 @@
 ﻿@page "/"
 @using miniprojekt2022.Shared.Models;
 @using miniprojekt2022.Client.Services;
+@using System;
 
 <PageTitle>Book din shelter</PageTitle>
-<div class ="d-flex justify-content-center">
+<div class="d-flex justify-content-center">
     <h3>Book dit shelter nu!</h3>
 </div>
 
@@ -12,80 +13,85 @@
     <div class="row ">
         <div class="col-sm-6 pt-4">
             <ul style="list-style-type:none;">
-
+                <!--laver en list med alle items i vores shelterlist-->
                 @foreach (var item in ShelterList)
                 {
-                    
+
 
                     <li class="shadow-sm p-3 mb-4 bg-light rounded">
                         <p>
-
-                            Navn: @item.property.PropShelterNavn <br />
-                            Besrivelse: @item.property.PropBeskrivelse <br />
-                            Max antal pladser: @item.property.PropAntalPersoner
+                            <!--tilgår en attribute i underobjektet "Property" inde i objektet "ShelterItem" -->
+                            <strong>Navn: </strong>@item.property.PropShelterNavn <br />
+                            <strong>Beskrivelse: </strong>@item.property.PropBeskrivelse <br />
+                            <strong>Max antal pladser: </strong>@item.property.PropAntalPersoner
                         </p>
-                        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" @onclick="()=>VælgShelter(item)">vælg</button>
+                        <!--On click listener med arrow function-->
+                        <button type="button" class="btn btn-primary" @onclick="()=>VælgShelter(item)">vælg</button>
                     </li>
-        }
-                </ul>
-            </div>
-        
-            <div class="col-sm-6">
-                <div class="sticky-top">
+                }
+            </ul>
+        </div>
 
-                    <EditForm EditContext="@EditContext" class="row p-3" OnValidSubmit="@AddBookingHandler" OnInvalidSubmit="@HandleInvalidSubmit">
-                        <DataAnnotationsValidator />
+        <div class="col-sm-6">
+            <!--sticky top gør at dens position forbliver på skærmen når man scroller-->
+            <div class="sticky-top">
+                <!--editform er en del af blazor, edit context skal være med, da den prøver at følge formen på en objekt-->
+                <EditForm EditContext="@EditContext" class="row p-3" OnValidSubmit="@AddBookingHandler" OnInvalidSubmit="@HandleInvalidSubmit">
+                    <DataAnnotationsValidator />
 
-                        <div class="col-md-12 mb-3">
-                            <label>Fulde Navn</label>
-                            <InputText id="navn" @bind-Value="CurrentBooking.KundeNavn" class="form-control" />
-                            <ValidationMessage For="@(() => CurrentBooking.KundeNavn)" />
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <label>Email</label>
-                            <InputText id="email" @bind-Value="CurrentBooking.Email" class="form-control" />
-                            <ValidationMessage For="@(() => CurrentBooking.Email)" />
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <label>Telefon</label>
-                            <InputText id="tlf" @bind-Value="CurrentBooking.Telefon" class="form-control" />
-                            <ValidationMessage For="@(() => CurrentBooking.Telefon)" />
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label>Start Dato</label>
-                            <InputDate id="startdato" @bind-Value="CurrentBooking.StartDato" class="form-control" />
-                            <ValidationMessage For="@(() => CurrentBooking.StartDato)" />
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label>Slut Dato</label>
-                            <InputDate id="slutdato" @bind-Value="CurrentBooking.SlutDato" class="form-control" />
-                            <ValidationMessage For="@(() => CurrentBooking.SlutDato)" />
-                        </div>
-                        <div class="col-12 mb-6">
-                            <button type="submit" class="btn btn-primary">BOOK</button>
-                        </div>
-                    </EditForm>
-                    @if (ErrorCode == 200)
-                    {
-                        <div class="alert alert-success" role="alert">
-                            <strong>Succes!</strong> Din booking er registreret i systemet!
-                        </div>
+                    <div class="col-md-12 mb-3">
+                        <label>Fulde Navn</label>
+                        <InputText id="navn" @bind-Value="CurrentBooking.KundeNavn" class="form-control" />
+                        <ValidationMessage For="@(() => CurrentBooking.KundeNavn)" />
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label>Email</label>
+                        <InputText id="email" @bind-Value="CurrentBooking.Email" class="form-control" />
+                        <ValidationMessage For="@(() => CurrentBooking.Email)" />
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label>Telefon</label>
+                        <InputText id="tlf" @bind-Value="CurrentBooking.Telefon" class="form-control" />
+                        <ValidationMessage For="@(() => CurrentBooking.Telefon)" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Start Dato</label>
+                        <InputDate id="startdato" @bind-Value="CurrentBooking.StartDato" class="form-control" />
+                        <ValidationMessage For="@(() => CurrentBooking.StartDato)" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Slut Dato</label>
+                        <InputDate id="slutdato" @bind-Value="CurrentBooking.SlutDato" class="form-control" />
+                        <ValidationMessage For="@(() => CurrentBooking.SlutDato)" />
+                    </div>
+                    <div class="col-12 mb-6">
+                        <button type="submit" class="btn btn-primary">BOOK</button>
+                    </div>
+                </EditForm>
 
-                    }
-                </div>
+                @if (ErrorCode == 200)
+                {
+                    <div class="alert alert-success" role="alert">
+                        <strong>Succes!</strong> Din booking er registreret i systemet!
+                    </div>
+
+                }
+                <!--laver div pga. sticky-top ikke kan ramme divs med andre bootstrap klasser-->
                 <div>
-                    @if (CurrentBooking.ShelterId != null)
-                    {
-                        <div class="card col-sm-6">
+                @if (CurrentBooking.ShelterId != null)
+                {
+                    <div class="card col-sm-6">
                         <div class="card-body col-sm-7">
-                            <strong>Din valgte booking:</strong> <br /> @ValgtShelterNavn
+                            <strong>Dit valgte shelter:</strong> <br /> @ValgtShelterNavn
                         </div>
                     </div>
 
-                    }
-                </div>
+                }
             </div>
         </div>
+
+    </div>
+</div>
     </div>
 
 @code {
@@ -93,40 +99,43 @@
     private EditContext EditContext;
     public BookingItem CurrentBooking = new BookingItem();
 
-
     public List<ShelterItem> ShelterList = new List<ShelterItem>();
     public int ErrorCode { get; set; }
-    private string? SelectedShelterId { get; set; }
+    
 
     [Inject]
     public IShelterService Service { get; set; }
 
+    //Henter alle shelters fra mongo med service(http)(så skal være async)
     protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine("hej");
         ShelterList = (await Service.GetAllShelters()).ToList();
-        Console.WriteLine("hej");
     }
 
+    //laver ny edit context objekt når siden starter, modelerer ud fra objektet CurrentBooking
     protected override void OnInitialized()
     {
         EditContext = new EditContext(CurrentBooking);
     }
+
+    //når man trykker på knappen "vælg" kører denne: lambda funktion, sætter ID fra listen på objektet current booking
+    //og sætte navn-værdien fra samme på den tomme string ValgtShelterNavn
     public void VælgShelter(ShelterItem x)
     {
         CurrentBooking.ShelterId = x.ObjectIdShelter;
-        Console.WriteLine("id sat til SelectedSHelterid");
         ValgtShelterNavn = x.property.PropShelterNavn;
     }
 
+    //Sender CurrentBooking videre til servicen og renser alt data så vi starter forfra.
     public async Task AddBookingHandler()
     {
-        Console.WriteLine("Current booking id er sat til local variabel");
         ErrorCode = await Service.AddBooking(CurrentBooking);
         CurrentBooking = new BookingItem();
         EditContext = new EditContext(CurrentBooking);
         Console.WriteLine("Booking added: return code: " + ErrorCode);
     }
+
+    //metoder hvis bruger indtaster invalid data, kommer kun i console.
     public void HandleInvalidSubmit()
     {
         Console.WriteLine("Hey det er invalid data");

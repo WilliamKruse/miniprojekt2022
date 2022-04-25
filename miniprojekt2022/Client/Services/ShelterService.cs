@@ -12,7 +12,7 @@ namespace miniprojekt2022.Client.Services
 
 
 
-        //Contructor
+        //Contructor laver ny client
         public ShelterService(HttpClient httpClient)
         {
             this.httpClient = httpClient;
@@ -48,7 +48,7 @@ namespace miniprojekt2022.Client.Services
 
 
 
-        //async metode til at slette en booking via booking id
+        //async metode til at slette en booking via booking id -- bruges ikke
         public async Task<int> DeleteBooking(int id)
         {
             var response = await httpClient.DeleteAsync("api/shelterbookingapi/" + id);

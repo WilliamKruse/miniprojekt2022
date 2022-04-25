@@ -10,6 +10,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+//tilføjer service
 builder.Services.AddHttpClient<IShelterService, ShelterService>(client =>
 {
     client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);

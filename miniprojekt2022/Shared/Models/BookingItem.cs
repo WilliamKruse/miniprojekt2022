@@ -7,10 +7,12 @@ namespace miniprojekt2022.Shared.Models
 {
 	public class BookingItem
 	{
+		//seralizering mapper fields fra mongo til attributter i vores klasse.
 		[BsonId]
 		[BsonRepresentation(BsonType.ObjectId)]
 		public string? ObjectIdBooking { get; set; }
 
+		//Validering
 		[Required(ErrorMessage = "Du skal udfylde dette felt")]
 		[BsonElement("kunde_navn")]
 		[StringLength(40,ErrorMessage = "Det navn er for langt")]
@@ -27,7 +29,7 @@ namespace miniprojekt2022.Shared.Models
 		[BsonElement("telefon")]
 		public string Telefon { get; set; }
 
-		[Required]
+	
 		[BsonElement("shelter_id")]
 		public string ShelterId { get; set; }
 
@@ -40,11 +42,13 @@ namespace miniprojekt2022.Shared.Models
 		[BsonElement("slut_dato")]
 		public DateTime? SlutDato { get; set; }
 
+		//lav tom contructor fordi mongoDriver bruger kun tomme contructors til alt.
 		public BookingItem()
         {
 			
         }
 
+		//contructor til booking
 		public BookingItem(string kundeNavn = "", string email = "", string telefon = "", string shelterId = "", DateTime startDato = new DateTime(), DateTime slutDato = new DateTime())
 		{
 			this.KundeNavn = kundeNavn;

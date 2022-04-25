@@ -5,6 +5,7 @@ using MongoDB.Bson;
 
 namespace miniprojekt2022.Shared.Models
 {
+	//deseralizering
 	[BsonIgnoreExtraElements]
 	public class ShelterProperty
 	{

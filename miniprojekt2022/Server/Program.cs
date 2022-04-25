@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+//tilføjer repository mongo
 builder.Services.AddScoped<IShelterRepository, ShelterRepositoryMongo>();
 
 var app = builder.Build();
