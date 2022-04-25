@@ -1,0 +1,104 @@
+﻿@page "/pedelside"
+@using miniprojekt2022.Client.Services;
+@using miniprojekt2022.Shared.Models;
+
+<PageTitle>Pedel Side</PageTitle>
+
+<h1>Oversigt over shelter bookings</h1>
+
+<EditForm EditContext="@EditContext" class="row p-3"
+          OnValidSubmit="@FilterShelterId"
+          OnInvalidSubmit="@HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+
+    <div class="col-md-4 mb-3">
+        <label>Shelter id</label>
+        <InputText id="ShelterId" placeholder="Shelter id" @bind-Value="BookItem.ShelterId" class="form-control" />
+        <ValidationMessage For="@(() => BookItem.ShelterId)" />
+    </div>
+    <div class="col-12 mb-3">
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </div>
+
+</EditForm>
+
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>Kunde navn</th>
+            <th>Email</th>
+            <th>Telefon nr.</th>
+            <th>Shelter id</th>
+            <th>Start dato</th>
+            <th>Slut dato</th>
+            <th>Handlinger</th>
+        </tr>
+    </thead>
+
+    <!--går igennem Bookings og laver en tabel-->
+
+
+    <tbody>
+        @foreach (var list in Bookings)
+        {
+            <tr>
+                <td>@list.KundeNavn</td>
+                <td>@list.Email</td>
+                <td>@list.Telefon</td>
+                <td>@list.ShelterId</td>
+                <td>@list.StartDato</td>
+                <td>@list.SlutDato</td>
+                <td><button class="btn delete"><span class="oi oi-trash"></span></button></td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+
+@code {
+    public BookingItem BookItem = new BookingItem();
+    public List<BookingItem> Bookings = new List<BookingItem>();
+    public int ErrorCode { get; set; } = 0;
+    private EditContext EditContext;
+
+
+    // Bruges til at erklære, at man vil bruge sin service
+    [Inject]
+    public IShelterService Service { get; set; }
+
+    // Nu bruger vi vores service ved hjælp af en override metode
+    protected override async Task OnInitializedAsync()
+    {
+        Bookings = (await Service.GetAllBookings()).ToList();
+    }
+
+    protected override void OnInitialized()
+    {
+        EditContext = new EditContext(BookItem);
+    }
+
+    public void HandleInvalidSubmit()
+    {
+        Console.WriteLine("Fejl");
+    }
+
+    public void FilterShelterId()
+    {
+        var FilterBookings = new List<BookingItem>();
+
+        foreach (var item in Bookings)
+        {
+            if (item.ShelterId == BookItem.ShelterId)
+            {
+                FilterBookings.Add(item);
+            }
+        }
+        EditContext = new EditContext(BookItem);
+        Console.WriteLine("Hej");
+        // return FilterBookings;
+    }
+
+
+}

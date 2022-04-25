@@ -1,10 +1,136 @@
 ﻿@page "/"
+@using miniprojekt2022.Shared.Models;
+@using miniprojekt2022.Client.Services;
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Book din shelter</PageTitle>
+<div class ="d-flex justify-content-center">
+    <h3>Book dit shelter nu!</h3>
+</div>
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-6 pt-4">
+            <ul style="list-style-type:none;">
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+                @foreach (var item in ShelterList)
+                {
+                    
+
+                    <li class="shadow-sm p-3 mb-4 bg-light rounded">
+                        <p>
+
+                            Navn: @item.property.PropShelterNavn <br />
+                            Besrivelse: @item.property.PropBeskrivelse <br />
+                            Max antal pladser: @item.property.PropAntalPersoner
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" @onclick="()=>VælgShelter(item)">vælg</button>
+                    </li>
+        }
+                </ul>
+            </div>
+        
+            <div class="col-sm-6">
+                <div class="sticky-top">
+
+                    <EditForm EditContext="@EditContext" class="row p-3" OnValidSubmit="@AddBookingHandler" OnInvalidSubmit="@HandleInvalidSubmit">
+                        <DataAnnotationsValidator />
+
+                        <div class="col-md-12 mb-3">
+                            <label>Fulde Navn</label>
+                            <InputText id="navn" @bind-Value="CurrentBooking.KundeNavn" class="form-control" />
+                            <ValidationMessage For="@(() => CurrentBooking.KundeNavn)" />
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label>Email</label>
+                            <InputText id="email" @bind-Value="CurrentBooking.Email" class="form-control" />
+                            <ValidationMessage For="@(() => CurrentBooking.Email)" />
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label>Telefon</label>
+                            <InputText id="tlf" @bind-Value="CurrentBooking.Telefon" class="form-control" />
+                            <ValidationMessage For="@(() => CurrentBooking.Telefon)" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Start Dato</label>
+                            <InputDate id="startdato" @bind-Value="CurrentBooking.StartDato" class="form-control" />
+                            <ValidationMessage For="@(() => CurrentBooking.StartDato)" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Slut Dato</label>
+                            <InputDate id="slutdato" @bind-Value="CurrentBooking.SlutDato" class="form-control" />
+                            <ValidationMessage For="@(() => CurrentBooking.SlutDato)" />
+                        </div>
+                        <div class="col-12 mb-6">
+                            <button type="submit" class="btn btn-primary">BOOK</button>
+                        </div>
+                    </EditForm>
+                    @if (ErrorCode == 200)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            <strong>Succes!</strong> Din booking er registreret i systemet!
+                        </div>
+
+                    }
+                </div>
+                <div>
+                    @if (CurrentBooking.ShelterId != null)
+                    {
+                        <div class="card col-sm-6">
+                        <div class="card-body col-sm-7">
+                            <strong>Din valgte booking:</strong> <br /> @ValgtShelterNavn
+                        </div>
+                    </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+@code {
+    private string? ValgtShelterNavn { get; set; }
+    private EditContext EditContext;
+    public BookingItem CurrentBooking = new BookingItem();
+
+
+    public List<ShelterItem> ShelterList = new List<ShelterItem>();
+    public int ErrorCode { get; set; }
+    private string? SelectedShelterId { get; set; }
+
+    [Inject]
+    public IShelterService Service { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("hej");
+        ShelterList = (await Service.GetAllShelters()).ToList();
+        Console.WriteLine("hej");
+    }
+
+    protected override void OnInitialized()
+    {
+        EditContext = new EditContext(CurrentBooking);
+    }
+    public void VælgShelter(ShelterItem x)
+    {
+        CurrentBooking.ShelterId = x.ObjectIdShelter;
+        Console.WriteLine("id sat til SelectedSHelterid");
+        ValgtShelterNavn = x.property.PropShelterNavn;
+    }
+
+    public async Task AddBookingHandler()
+    {
+        Console.WriteLine("Current booking id er sat til local variabel");
+        ErrorCode = await Service.AddBooking(CurrentBooking);
+        CurrentBooking = new BookingItem();
+        EditContext = new EditContext(CurrentBooking);
+        Console.WriteLine("Booking added: return code: " + ErrorCode);
+    }
+    public void HandleInvalidSubmit()
+    {
+        Console.WriteLine("Hey det er invalid data");
+    }
+
+}
 
